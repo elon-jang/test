@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "student_count": 10,
+    "at_risk_count": 3
+  },
+  "results": [
+    {
+      "student_id": "2024001",
+      "name": "김민준",
+      "midterm": 85.0,
+      "final": 92.0,
+      "assignment_avg": 91.0,
+      "attendance_pct": 100.0,
+      "total_score": 90.8,
+      "grade": "A"
+    },
+    {
+      "student_id": "2024002",
+      "name": "이서연",
+      "midterm": 72.0,
+      "final": 68.0,
+      "assignment_avg": 70.0,
+      "attendance_pct": 90.0,
+      "total_score": 73.0,
+      "grade": "C"
+    },
+    {
+      "student_id": "2024003",
+      "name": "박도윤",
+      "midterm": 95.0,
+      "final": 98.0,
+      "assignment_avg": 96.0,
+      "attendance_pct": 100.0,
+      "total_score": 96.9,
+      "grade": "A+"
+    },
+    {
+      "student_id": "2024004",
+      "name": "최수아",
+      "midterm": 60.0,
+      "final": 55.0,
+      "assignment_avg": 52.3,
+      "attendance_pct": 75.0,
+      "total_score": 58.8,
+      "grade": "F"
+    },
+    {
+      "student_id": "2024005",
+      "name": "정예준",
+      "midterm": 78.0,
+      "final": 82.0,
+      "assignment_avg": 81.0,
+      "attendance_pct": 95.0,
+      "total_score": 82.5,
+      "grade": "B"
+    },
+    {
+      "student_id": "2024006",
+      "name": "강하은",
+      "midterm": 45.0,
+      "final": 42.0,
+      "assignment_avg": 47.7,
+      "attendance_pct": 60.0,
+      "total_score": 47.0,
+      "grade": "F"
+    },
+    {
+      "student_id": "2024007",
+      "name": "윤지호",
+      "midterm": 88.0,
+      "final": 85.0,
+      "assignment_avg": 86.3,
+      "attendance_pct": 98.0,
+      "total_score": 88.2,
+      "grade": "B+"
+    },
+    {
+      "student_id": "2024008",
+      "name": "임서윤",
+      "midterm": 92.0,
+      "final": 90.0,
+      "assignment_avg": 91.3,
+      "attendance_pct": 100.0,
+      "total_score": 92.4,
+      "grade": "A"
+    },
+    {
+      "student_id": "2024009",
+      "name": "한주원",
+      "midterm": 70.0,
+      "final": 65.0,
+      "assignment_avg": 66.7,
+      "attendance_pct": 85.0,
+      "total_score": 69.9,
+      "grade": "D+"
+    },
+    {
+      "student_id": "2024010",
+      "name": "송하린",
+      "midterm": 82.0,
+      "final": 88.0,
+      "assignment_avg": 85.0,
+      "attendance_pct": 92.0,
+      "total_score": 86.0,
+      "grade": "B+"
+    }
+  ],
+  "at_risk": [
+    {
+      "student_id": "2024004",
+      "name": "최수아",
+      "midterm": 60.0,
+      "final": 55.0,
+      "assignment_avg": 52.3,
+      "attendance_pct": 75.0,
+      "total_score": 58.8,
+      "grade": "F",
+      "issues": [
+        "총점 미달",
+        "출석 부족"
+      ]
+    },
+    {
+      "student_id": "2024006",
+      "name": "강하은",
+      "midterm": 45.0,
+      "final": 42.0,
+      "assignment_avg": 47.7,
+      "attendance_pct": 60.0,
+      "total_score": 47.0,
+      "grade": "F",
+      "issues": [
+        "총점 미달",
+        "출석 부족"
+      ]
+    },
+    {
+      "student_id": "2024009",
+      "name": "한주원",
+      "midterm": 70.0,
+      "final": 65.0,
+      "assignment_avg": 66.7,
+      "attendance_pct": 85.0,
+      "total_score": 69.9,
+      "grade": "D+",
+      "issues": [
+        "총점 미달"
+      ]
+    }
+  ],
+  "statistics": {
+    "student_count": 10,
+    "score_avg": 78.5,
+    "score_max": 96.9,
+    "score_min": 47.0,
+    "at_risk_count": 3,
+    "grade_distribution": {
+      "A": 2,
+      "C": 1,
+      "A+": 1,
+      "F": 2,
+      "B": 1,
+      "B+": 2,
+      "D+": 1
+    },
+    "attendance_avg": 89.5
+  }
+}

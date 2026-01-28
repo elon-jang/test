@@ -1,0 +1,63 @@
+# 송장 분류 & 경비보고서 설정
+# ===================================================================
+
+# ★ Mapping Table: 경비 카테고리 → GL 계정 코드
+gl_accounts:
+  교통비:
+    code: "GL-5100"
+    description: "출장/교통비"
+    keywords: [택시, KTX, 기차, 버스, 항공, 주차, 톨게이트, 고속도로, 대리운전]
+  식비:
+    code: "GL-5300"
+    description: "복리후생/식비"
+    keywords: [식사, 회식, 점심, 저녁, 커피, 카페, 식당, 배달, 음료]
+  소프트웨어:
+    code: "GL-5200"
+    description: "소프트웨어/라이선스"
+    keywords: [구독, 라이선스, SaaS, 클라우드, AWS, Azure, Adobe, Figma, Slack, Notion]
+  사무용품:
+    code: "GL-5400"
+    description: "소모품/사무용품"
+    keywords: [용지, 토너, 펜, 노트, 문구, 프린터, 잉크, USB, 케이블]
+  숙박비:
+    code: "GL-5110"
+    description: "출장숙박비"
+    keywords: [호텔, 숙박, 모텔, 게스트하우스, 에어비앤비]
+  교육비:
+    code: "GL-5500"
+    description: "교육/세미나"
+    keywords: [교육, 세미나, 컨퍼런스, 워크숍, 수강, 자격증]
+  기타:
+    code: "GL-5900"
+    description: "기타 경비"
+    keywords: []
+
+# ★ Decision Tree: 정책 준수 판단 기준
+policy:
+  # 카테고리별 건당 한도 (원)
+  limits:
+    교통비: 200000
+    식비: 100000
+    소프트웨어: 500000
+    사무용품: 300000
+    숙박비: 150000
+    교육비: 1000000
+    기타: 100000
+  # 사전승인 필요 금액 (원)
+  pre_approval_threshold: 500000
+  # 중복 판단 기준
+  duplicate_detection:
+    same_day_same_amount: true
+    same_vendor_within_days: 3
+  # 이상치 판단: 해당 카테고리 평균 대비 N배 초과
+  outlier_multiplier: 3.0
+
+# 추출 설정
+extraction:
+  date_format: "%Y-%m-%d"
+  amount_patterns:
+    - '[\d,]+원'
+    - '₩[\d,]+'
+  vendor_column: "거래처"
+  description_column: "내역"
+  amount_column: "금액"

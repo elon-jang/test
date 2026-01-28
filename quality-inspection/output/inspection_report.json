@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "inspection_date": "2025-01-27",
+    "total_parts": 7,
+    "total_measurements": 10,
+    "processing_date": "2026-01-28T15:00:00",
+    "generated_at": "2026-01-28T15:35:56.513098"
+  },
+  "results": [
+    {
+      "part_id": "ENG-001",
+      "part_name": "엔진 마운트 볼트",
+      "category": "mechanical",
+      "measurement_type": "torque",
+      "measured_value": 45.2,
+      "unit": "Nm",
+      "spec_min": 40.0,
+      "spec_max": 50.0,
+      "critical": false,
+      "margin_pct": 48.0,
+      "initial_class": "PASS",
+      "final_result": "PASS",
+      "rationale": "토크(45.2Nm)가 규격 중앙에 근접. 충분한 마진(48%) 확보.",
+      "defect_code": null,
+      "corrective_action": null,
+      "priority": null
+    },
+    {
+      "part_id": "ENG-001",
+      "part_name": "엔진 마운트 볼트",
+      "category": "mechanical",
+      "measurement_type": "temperature",
+      "measured_value": 82.5,
+      "unit": "°C",
+      "spec_min": null,
+      "spec_max": 85.0,
+      "critical": false,
+      "margin_pct": 2.9,
+      "initial_class": "BORDERLINE",
+      "final_result": "CONDITIONAL PASS",
+      "rationale": "온도(82.5°C)가 상한(85°C) 근처(마진 2.9%). 그러나 동일 부품의 토크 측정(45.2Nm)이 충분한 마진(48%)으로 정상. 비안전 부품이며 단일 항목만 경계이므로 조건부 합격. 냉각 시스템 점검 권고.",
+      "defect_code": null,
+      "corrective_action": "다음 검사 시 온도 측정 포인트 재확인, 냉각 계통 점검",
+      "priority": "low"
+    },
+    {
+      "part_id": "BRK-001",
+      "part_name": "브레이크 패드",
+      "category": "safety",
+      "measurement_type": "thickness",
+      "measured_value": 3.8,
+      "unit": "mm",
+      "spec_min": 3.0,
+      "spec_max": 5.0,
+      "critical": true,
+      "margin_pct": 40.0,
+      "initial_class": "PASS",
+      "final_result": "PASS",
+      "rationale": "패드 두께(3.8mm)가 규격 내(3.0~5.0mm). 안전 부품이나 마진 충분(40%).",
+      "defect_code": null,
+      "corrective_action": null,
+      "priority": null
+    },
+    {
+      "part_id": "BRK-001",
+      "part_name": "브레이크 패드",
+      "category": "safety",
+      "measurement_type": "friction_coefficient",
+      "measured_value": 0.31,
+      "unit": "",
+      "spec_min": 0.3,
+      "spec_max": 0.5,
+      "critical": true,
+      "margin_pct": 5.0,
+      "initial_class": "BORDERLINE",
+      "final_result": "FAIL",
+      "rationale": "마찰계수(0.31)가 하한(0.3) 근처(마진 5%). Decision Tree: 안전 부품(critical=true)은 경계값 불허. 브레이크 제동 성능 저하 위험으로 불합격 처리.",
+      "defect_code": "CRT",
+      "corrective_action": "해당 로트 전수 검사, 패드 소재 마찰 특성 재시험, 공급업체 시정 요청서 발행",
+      "priority": "critical"
+    },
+    {
+      "part_id": "ECU-001",
+      "part_name": "엔진 제어 유닛",
+      "category": "electrical",
+      "measurement_type": "voltage",
+      "measured_value": 4.5,
+      "unit": "V",
+      "spec_min": 4.75,
+      "spec_max": 5.25,
+      "critical": true,
+      "margin_pct": -50.0,
+      "initial_class": "FAIL",
+      "final_result": "FAIL",
+      "rationale": "전압(4.5V)이 하한(4.75V) 미달(마진 -50%). ECU 정상 동작 전압 범위를 벗어남. 동일 부품의 전류(3.5A)도 규격 초과로 전원 계통 전반적 이상 의심.",
+      "defect_code": "CMP",
+      "corrective_action": "ECU 전원 입력부 점검, 전압 레귤레이터 출력 확인, 해당 배치 ECU 전수 전기 검사",
+      "priority": "critical"
+    },
+    {
+      "part_id": "ECU-001",
+      "part_name": "엔진 제어 유닛",
+      "category": "electrical",
+      "measurement_type": "current",
+      "measured_value": 3.5,
+      "unit": "A",
+      "spec_min": 1.5,
+      "spec_max": 3.0,
+      "critical": false,
+      "margin_pct": -33.3,
+      "initial_class": "FAIL",
+      "final_result": "FAIL",
+      "rationale": "전류(3.5A)가 상한(3.0A) 초과(마진 -33.3%). 과전류 상태로 내부 회로 손상 위험. 동일 부품 전압도 이탈하여 ECU 자체 결함 또는 전원 공급 이상으로 판단.",
+      "defect_code": "CMP",
+      "corrective_action": "ECU 모듈 교체 후 재측정, 전원 공급 라인 절연 저항 확인",
+      "priority": "high"
+    },
+    {
+      "part_id": "SUS-001",
+      "part_name": "서스펜션 스프링",
+      "category": "mechanical",
+      "measurement_type": "spring_rate",
+      "measured_value": 28.5,
+      "unit": "N/mm",
+      "spec_min": 25.0,
+      "spec_max": 35.0,
+      "critical": false,
+      "margin_pct": 35.0,
+      "initial_class": "PASS",
+      "final_result": "PASS",
+      "rationale": "스프링 상수(28.5 N/mm)가 규격 내. 마진 35%로 양호.",
+      "defect_code": null,
+      "corrective_action": null,
+      "priority": null
+    },
+    {
+      "part_id": "AIR-001",
+      "part_name": "에어백 모듈",
+      "category": "safety",
+      "measurement_type": "deployment_time",
+      "measured_value": 28.0,
+      "unit": "ms",
+      "spec_min": null,
+      "spec_max": 35.0,
+      "critical": true,
+      "margin_pct": 20.0,
+      "initial_class": "PASS",
+      "final_result": "PASS",
+      "rationale": "전개 시간(28ms)이 규격(~35ms) 내. 안전 부품이나 마진 20%로 충분.",
+      "defect_code": null,
+      "corrective_action": null,
+      "priority": null
+    },
+    {
+      "part_id": "WIR-001",
+      "part_name": "메인 배선 하네스",
+      "category": "electrical",
+      "measurement_type": "resistance",
+      "measured_value": 1.5,
+      "unit": "Ω",
+      "spec_min": null,
+      "spec_max": 1.0,
+      "critical": false,
+      "margin_pct": -50.0,
+      "initial_class": "FAIL",
+      "final_result": "FAIL",
+      "rationale": "저항값(1.5Ω)이 상한(1.0Ω)을 50% 초과. 접촉 저항 증가 또는 도체 단면적 부족이 의심됨. 커넥터 납땜 상태 확인 필요.",
+      "defect_code": "SOL",
+      "corrective_action": "커넥터 납땜 상태 육안 검사, 재납땜 후 재측정, 동일 생산 라인 배선 5개 샘플링 검사",
+      "priority": "high"
+    },
+    {
+      "part_id": "SEN-001",
+      "part_name": "산소 센서",
+      "category": "electrical",
+      "measurement_type": "response_time",
+      "measured_value": 48.0,
+      "unit": "ms",
+      "spec_min": null,
+      "spec_max": 50.0,
+      "critical": false,
+      "margin_pct": 4.0,
+      "initial_class": "BORDERLINE",
+      "final_result": "CONDITIONAL PASS",
+      "rationale": "응답 시간(48ms)이 상한(50ms) 근처(마진 4%). 비안전 부품이며 해당 센서의 다른 측정 항목 없음. 단일 항목 경계이므로 조건부 합격. 재검사 권고.",
+      "defect_code": null,
+      "corrective_action": "다음 로트에서 산소 센서 응답 시간 추가 샘플링(5개), 센서 캘리브레이션 확인",
+      "priority": "low"
+    }
+  ],
+  "system_issues": [
+    {
+      "description": "ECU-001(엔진 제어 유닛)의 전압과 전류가 동시에 규격 이탈. 개별 부품 결함이 아닌 전원 공급 계통 또는 ECU 모듈 자체의 시스템 레벨 결함 가능성.",
+      "affected_parts": [
+        "ECU-001"
+      ],
+      "suggested_investigation": "1) ECU 전원 입력단 전압 파형 분석, 2) 레귤레이터 출력 안정성 확인, 3) 해당 배치 5개 ECU 추가 전기 검사, 4) 전원 하네스 절연 저항 측정"
+    }
+  ],
+  "summary": {
+    "overall_assessment": "10건 측정 중 5건 합격(PASS 4 + CONDITIONAL PASS 1 제외 시 실질 합격률 40%), 4건 불합격, 1건 조건부 합격. 안전 부품(BRK-001 마찰계수)과 전기 부품(ECU-001, WIR-001)에서 중대 결함 발견. ECU-001은 전압·전류 동시 이탈로 시스템 이슈 의심. 즉시 시정 조치 필요.",
+    "pass_rate": 50.0,
+    "key_findings": [
+      "BRK-001 브레이크 패드 마찰계수가 하한 근처(0.31/0.30)로 안전 기준 미달 → 로트 전수 검사 필요",
+      "ECU-001 전압·전류 동시 규격 이탈 → 시스템 레벨 결함 의심, 전원 계통 점검 필요",
+      "WIR-001 배선 저항 50% 초과 → 납땜 품질 점검 필요",
+      "ENG-001 온도, SEN-001 응답시간은 경계값이나 조건부 합격 → 모니터링 계속"
+    ],
+    "recommended_actions": [
+      "[즉시] BRK-001 해당 로트 전수 검사 및 공급업체 시정 요청",
+      "[즉시] ECU-001 전원 계통 및 모듈 점검, 배치 내 추가 샘플 검사",
+      "[긴급] WIR-001 커넥터 납땜 상태 확인 및 재작업",
+      "[일반] ENG-001 냉각 계통 점검, SEN-001 센서 캘리브레이션 확인",
+      "[예방] 동일 생산 라인 검사 빈도 일시적 증가 (주 1회 → 일 1회)"
+    ]
+  },
+  "statistics": {
+    "total_measurements": 10,
+    "pass_count": 4,
+    "conditional_pass_count": 2,
+    "fail_count": 4,
+    "pass_rate_pct": 60.0,
+    "by_category": {
+      "mechanical": 3,
+      "safety": 3,
+      "electrical": 4
+    },
+    "by_defect_code": {
+      "CRT": 1,
+      "CMP": 2,
+      "SOL": 1
+    },
+    "by_priority": {
+      "low": 2,
+      "critical": 2,
+      "high": 2
+    }
+  }
+}

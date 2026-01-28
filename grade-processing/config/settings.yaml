@@ -1,0 +1,48 @@
+# 성적 처리 설정
+# ===================================================================
+
+# 가중치 (합계 100)
+weights:
+  midterm: 30         # 중간고사
+  final: 30           # 기말고사
+  assignments: 25     # 과제 평균
+  attendance: 15      # 출석
+
+# 등급 기준 (내림차순)
+grade_scale:
+  - grade: "A+"
+    min: 95
+  - grade: "A"
+    min: 90
+  - grade: "B+"
+    min: 85
+  - grade: "B"
+    min: 80
+  - grade: "C+"
+    min: 75
+  - grade: "C"
+    min: 70
+  - grade: "D+"
+    min: 65
+  - grade: "D"
+    min: 60
+  - grade: "F"
+    min: 0
+
+# 관찰 대상 기준
+thresholds:
+  at_risk_score: 70       # 총점 이 미만 → 관찰 대상
+  attendance_warning: 80  # 출석률(%) 이 미만 → 출석 경고
+
+# 템플릿 설정
+template:
+  file: "template.xlsx"
+  sheets:
+    report: "성적표"
+    summary: "반 요약"
+    at_risk: "관찰 대상"
+  # 각 시트별 데이터 시작 행 (헤더 다음 행)
+  data_start_row:
+    report: 5
+    summary: 4
+    at_risk: 4

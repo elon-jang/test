@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "total_items": 12,
+    "total_amount": 3560100,
+    "processing_date": "2026-01-28T15:00:00"
+  },
+  "items": [
+    {
+      "id": "INV-001",
+      "date": "2025-01-15",
+      "vendor": "스타벅스 강남역점",
+      "description": "팀 미팅 커피",
+      "amount": 25200,
+      "category": "식비",
+      "gl_code": "GL-5300",
+      "policy_status": "APPROVED",
+      "rationale": "팀 미팅 중 음료 구매. 식비 한도(100,000원) 이내. 업무 관련성 명확.",
+      "flag": null
+    },
+    {
+      "id": "INV-002",
+      "date": "2025-01-16",
+      "vendor": "KTX 코레일",
+      "description": "서울→부산 출장 왕복",
+      "amount": 106400,
+      "category": "교통비",
+      "gl_code": "GL-5100",
+      "policy_status": "APPROVED",
+      "rationale": "서울-부산 KTX 왕복 요금. 교통비 한도(200,000원) 이내. 출장 목적 명시.",
+      "flag": null
+    },
+    {
+      "id": "INV-003",
+      "date": "2025-01-18",
+      "vendor": "한우마을",
+      "description": "부서 신년회 회식 (8명)",
+      "amount": 480000,
+      "category": "식비",
+      "gl_code": "GL-5300",
+      "policy_status": "PENDING",
+      "rationale": "식비 건당 한도(100,000원) 4.8배 초과. 단체 회식(8명)으로 1인당 60,000원은 합리적 수준이나 사전승인 필요.",
+      "flag": "한도초과: 480,000원 > 100,000원. 부서 회식 사전승인 확인 필요."
+    },
+    {
+      "id": "INV-004",
+      "date": "2025-01-20",
+      "vendor": "카카오택시",
+      "description": "고객사 미팅 이동",
+      "amount": 45000,
+      "category": "교통비",
+      "gl_code": "GL-5100",
+      "policy_status": "APPROVED",
+      "rationale": "같은 날 동일 금액(INV-005)이 있으나, '고객사 미팅 이동'과 '사무실 복귀'로 왕복 이용 확인. 중복 아님.",
+      "flag": null
+    },
+    {
+      "id": "INV-005",
+      "date": "2025-01-20",
+      "vendor": "카카오택시",
+      "description": "사무실 복귀",
+      "amount": 45000,
+      "category": "교통비",
+      "gl_code": "GL-5100",
+      "policy_status": "APPROVED",
+      "rationale": "INV-004의 복귀편. 왕복 택시 이용으로 판단. 중복 아님.",
+      "flag": null
+    },
+    {
+      "id": "INV-006",
+      "date": "2025-01-10",
+      "vendor": "Adobe Inc.",
+      "description": "Creative Cloud 연간 구독",
+      "amount": 792000,
+      "category": "소프트웨어",
+      "gl_code": "GL-5200",
+      "policy_status": "PENDING",
+      "rationale": "소프트웨어 한도(500,000원) 초과. Adobe CC는 디자인팀 필수 도구이나 연간 구독 금액이 한도를 초과하여 사전승인 필요.",
+      "flag": "사전승인 필요: 792,000원 > 500,000원. IT 부서 소프트웨어 구매 승인 절차 확인."
+    },
+    {
+      "id": "INV-007",
+      "date": "2025-01-22",
+      "vendor": "알파문구",
+      "description": "A4용지 10박스 + 토너 2개",
+      "amount": 185000,
+      "category": "사무용품",
+      "gl_code": "GL-5400",
+      "policy_status": "APPROVED",
+      "rationale": "사무용품 한도(300,000원) 이내. 소모성 사무용품으로 일상적 구매.",
+      "flag": null
+    },
+    {
+      "id": "INV-008",
+      "date": "2025-01-23",
+      "vendor": "호텔 부산",
+      "description": "부산 출장 1박",
+      "amount": 130000,
+      "category": "숙박비",
+      "gl_code": "GL-5110",
+      "policy_status": "APPROVED",
+      "rationale": "부산 출장 숙박(INV-002 KTX 출장과 연계). 숙박비 한도(150,000원) 이내.",
+      "flag": null
+    },
+    {
+      "id": "INV-009",
+      "date": "2025-01-25",
+      "vendor": "쿠팡",
+      "description": "사무실 비품 구매",
+      "amount": 1250000,
+      "category": "사무용품",
+      "gl_code": "GL-5400",
+      "policy_status": "REVIEW",
+      "rationale": "Script가 '기타'로 분류했으나 '사무실 비품'이므로 사무용품으로 재분류. 한도(300,000원) 4.2배 초과. 내역이 모호하여 구체적 품목 확인 필요. 금액 규모로 자산 계정(GL-1400) 분류 가능성.",
+      "flag": "이상치: 1,250,000원은 사무용품 평균 대비 현저히 높음. 품목 상세 및 자산/비용 구분 확인 필요."
+    },
+    {
+      "id": "INV-010",
+      "date": "2025-01-27",
+      "vendor": "교보문고",
+      "description": "업무 참고 도서 3권",
+      "amount": 67500,
+      "category": "교육비",
+      "gl_code": "GL-5500",
+      "policy_status": "APPROVED",
+      "rationale": "Script가 '기타'로 분류했으나 업무 참고 도서는 교육비로 재분류. 교육비 한도(1,000,000원) 이내.",
+      "flag": null
+    },
+    {
+      "id": "INV-011",
+      "date": "2025-01-28",
+      "vendor": "AWS",
+      "description": "EC2 + S3 월간 사용료",
+      "amount": 345000,
+      "category": "소프트웨어",
+      "gl_code": "GL-5200",
+      "policy_status": "APPROVED",
+      "rationale": "클라우드 인프라 월간 사용료. 소프트웨어 한도(500,000원) 이내. 정기 비용.",
+      "flag": null
+    },
+    {
+      "id": "INV-012",
+      "date": "2025-01-28",
+      "vendor": "팀원 점심",
+      "description": "팀 점심 식사 (5명)",
+      "amount": 89000,
+      "category": "식비",
+      "gl_code": "GL-5300",
+      "policy_status": "APPROVED",
+      "rationale": "팀 점심 식사(5명). 1인당 17,800원으로 합리적. 식비 한도(100,000원) 이내.",
+      "flag": null
+    }
+  ],
+  "summary": {
+    "by_category": {
+      "식비": {"count": 3, "total": 594200, "gl_code": "GL-5300"},
+      "교통비": {"count": 3, "total": 196400, "gl_code": "GL-5100"},
+      "소프트웨어": {"count": 2, "total": 1137000, "gl_code": "GL-5200"},
+      "사무용품": {"count": 2, "total": 1435000, "gl_code": "GL-5400"},
+      "숙박비": {"count": 1, "total": 130000, "gl_code": "GL-5110"},
+      "교육비": {"count": 1, "total": 67500, "gl_code": "GL-5500"}
+    },
+    "by_status": {
+      "APPROVED": 8,
+      "PENDING": 2,
+      "REVIEW": 1,
+      "FLAG": 0
+    },
+    "flagged_items": ["INV-003", "INV-006", "INV-009"],
+    "overall_assessment": "12건 총 3,560,100원 중 8건(67%) 승인, 2건 승인대기(회식+SW 한도초과), 1건 검토필요(사무실 비품 이상치). 중복 의심 2건은 왕복 택시로 확인되어 정상 처리. 카테고리 재분류 2건(기타→사무용품, 기타→교육비)."
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "measurements_file": "/Users/elon/elon/ai/test/quality-inspection/work/converted/measurements.csv",
+    "specifications_file": "/Users/elon/elon/ai/test/quality-inspection/work/converted/specifications.csv",
+    "extraction_timestamp": "2026-01-28T15:18:07.476442"
+  },
+  "items": [
+    {
+      "part_id": "ENG-001",
+      "part_name": "엔진 마운트 볼트",
+      "category": "mechanical",
+      "measurement_type": "torque",
+      "measured_value": 45.2,
+      "unit": "Nm",
+      "spec_min": 40.0,
+      "spec_max": 50.0,
+      "critical": false,
+      "margin_pct": 48.0,
+      "initial_class": "PASS",
+      "inspector": "김철수",
+      "date": "2025-01-27"
+    },
+    {
+      "part_id": "ENG-001",
+      "part_name": "엔진 마운트 볼트",
+      "category": "mechanical",
+      "measurement_type": "temperature",
+      "measured_value": 82.5,
+      "unit": "°C",
+      "spec_min": null,
+      "spec_max": 85.0,
+      "critical": false,
+      "margin_pct": 2.9,
+      "initial_class": "BORDERLINE",
+      "inspector": "김철수",
+      "date": "2025-01-27"
+    },
+    {
+      "part_id": "BRK-001",
+      "part_name": "브레이크 패드",
+      "category": "safety",
+      "measurement_type": "thickness",
+      "measured_value": 3.8,
+      "unit": "mm",
+      "spec_min": 3.0,
+      "spec_max": 5.0,
+      "critical": true,
+      "margin_pct": 40.0,
+      "initial_class": "PASS",
+      "inspector": "이영희",
+      "date": "2025-01-27"
+    },
+    {
+      "part_id": "BRK-001",
+      "part_name": "브레이크 패드",
+      "category": "safety",
+      "measurement_type": "friction_coefficient",
+      "measured_value": 0.31,
+      "unit": "",
+      "spec_min": 0.3,
+      "spec_max": 0.5,
+      "critical": true,
+      "margin_pct": 5.0,
+      "initial_class": "BORDERLINE",
+      "inspector": "이영희",
+      "date": "2025-01-27"
+    },
+    {
+      "part_id": "ECU-001",
+      "part_name": "엔진 제어 유닛",
+      "category": "electrical",
+      "measurement_type": "voltage",
+      "measured_value": 4.5,
+      "unit": "V",
+      "spec_min": 4.75,
+      "spec_max": 5.25,
+      "critical": true,
+      "margin_pct": -50.0,
+      "initial_class": "FAIL",
+      "inspector": "박민수",
+      "date": "2025-01-27"
+    },
+    {
+      "part_id": "ECU-001",
+      "part_name": "엔진 제어 유닛",
+      "category": "electrical",
+      "measurement_type": "current",
+      "measured_value": 3.5,
+      "unit": "A",
+      "spec_min": 1.5,
+      "spec_max": 3.0,
+      "critical": false,
+      "margin_pct": -33.3,
+      "initial_class": "FAIL",
+      "inspector": "박민수",
+      "date": "2025-01-27"
+    },
+    {
+      "part_id": "SUS-001",
+      "part_name": "서스펜션 스프링",
+      "category": "mechanical",
+      "measurement_type": "spring_rate",
+      "measured_value": 28.5,
+      "unit": "N/mm",
+      "spec_min": 25.0,
+      "spec_max": 35.0,
+      "critical": false,
+      "margin_pct": 35.0,
+      "initial_class": "PASS",
+      "inspector": "김철수",
+      "date": "2025-01-27"
+    },
+    {
+      "part_id": "AIR-001",
+      "part_name": "에어백 모듈",
+      "category": "safety",
+      "measurement_type": "deployment_time",
+      "measured_value": 28.0,
+      "unit": "ms",
+      "spec_min": null,
+      "spec_max": 35.0,
+      "critical": true,
+      "margin_pct": 20.0,
+      "initial_class": "PASS",
+      "inspector": "이영희",
+      "date": "2025-01-27"
+    },
+    {
+      "part_id": "WIR-001",
+      "part_name": "메인 배선 하네스",
+      "category": "electrical",
+      "measurement_type": "resistance",
+      "measured_value": 1.5,
+      "unit": "Ω",
+      "spec_min": null,
+      "spec_max": 1.0,
+      "critical": false,
+      "margin_pct": -50.0,
+      "initial_class": "FAIL",
+      "inspector": "박민수",
+      "date": "2025-01-27"
+    },
+    {
+      "part_id": "SEN-001",
+      "part_name": "산소 센서",
+      "category": "electrical",
+      "measurement_type": "response_time",
+      "measured_value": 48.0,
+      "unit": "ms",
+      "spec_min": null,
+      "spec_max": 50.0,
+      "critical": false,
+      "margin_pct": 4.0,
+      "initial_class": "BORDERLINE",
+      "inspector": "박민수",
+      "date": "2025-01-27"
+    }
+  ],
+  "parts_summary": {
+    "ENG-001": {
+      "part_name": "엔진 마운트 볼트",
+      "category": "mechanical",
+      "measurement_count": 2,
+      "all_items_indices": [
+        0,
+        1
+      ]
+    },
+    "BRK-001": {
+      "part_name": "브레이크 패드",
+      "category": "safety",
+      "measurement_count": 2,
+      "all_items_indices": [
+        2,
+        3
+      ]
+    },
+    "ECU-001": {
+      "part_name": "엔진 제어 유닛",
+      "category": "electrical",
+      "measurement_count": 2,
+      "all_items_indices": [
+        4,
+        5
+      ]
+    },
+    "SUS-001": {
+      "part_name": "서스펜션 스프링",
+      "category": "mechanical",
+      "measurement_count": 1,
+      "all_items_indices": [
+        6
+      ]
+    },
+    "AIR-001": {
+      "part_name": "에어백 모듈",
+      "category": "safety",
+      "measurement_count": 1,
+      "all_items_indices": [
+        7
+      ]
+    },
+    "WIR-001": {
+      "part_name": "메인 배선 하네스",
+      "category": "electrical",
+      "measurement_count": 1,
+      "all_items_indices": [
+        8
+      ]
+    },
+    "SEN-001": {
+      "part_name": "산소 센서",
+      "category": "electrical",
+      "measurement_count": 1,
+      "all_items_indices": [
+        9
+      ]
+    }
+  }
+}

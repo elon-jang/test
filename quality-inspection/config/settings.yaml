@@ -1,0 +1,79 @@
+# Configuration for Quality Inspection Report
+# Script performs numeric comparison + margin calculation; judgment logic is handled by LLM.
+
+# =============================================================================
+# ★ Mapping Table: Category → Keywords + Defect Codes
+# =============================================================================
+
+categories:
+  mechanical:
+    keywords:
+      - 엔진
+      - 변속기
+      - 서스펜션
+      - 볼트
+      - 스프링
+      - 마운트
+    defect_codes:
+      MAT: "재료 불량 (원자재 성적서 이상, 로트 불량)"
+      PRC: "공정 이상 (공정 파라미터 이탈, 온도/압력 이상)"
+      TLG: "금형/치공구 마모 (마모, 파손, 교체 주기 초과)"
+      HUM: "작업자 오류 (세팅 미스, 절차 미준수)"
+
+  electrical:
+    keywords:
+      - 배선
+      - 센서
+      - ECU
+      - 하네스
+      - 제어
+    defect_codes:
+      SOL: "납땜 불량 (접촉 불량, 냉납)"
+      CMP: "부품 불량 (부품 자체 규격 미달)"
+      ESD: "정전기 손상 (간헐적 오동작)"
+      CAL: "캘리브레이션 오류 (측정 편차, 오프셋)"
+
+  safety:
+    keywords:
+      - 에어백
+      - 브레이크
+      - 안전벨트
+      - 패드
+    defect_codes:
+      CRT: "치명적 결함 (안전 부품 규격 미달, 즉시 사용 중지)"
+      DGR: "위험 수준 (안전 마진 부족)"
+      MNR: "경미한 이탈 (안전 기능 영향 미미)"
+
+# =============================================================================
+# ★ Decision Tree Thresholds (경계값 판정 기준)
+# =============================================================================
+
+judgment:
+  # margin_pct 계산: 측정값이 규격 한계에서 얼마나 여유가 있는지 (%)
+  # margin_pct = min(|value - spec_min|, |value - spec_max|) / (spec_max - spec_min) * 100
+
+  borderline_threshold_pct: 10    # margin ≤ 10% → BORDERLINE
+  # margin > 10% → PASS
+  # outside spec → FAIL
+
+  # 안전 부품(critical=true)은 BORDERLINE → 자동 FAIL
+  safety_borderline_policy: "fail"
+
+# =============================================================================
+# ★ Corrective Action Priority Mapping
+# =============================================================================
+
+priority_rules:
+  critical_safety_fail: "critical"    # 안전 부품 FAIL → 즉시 조치
+  non_critical_fail: "high"           # 일반 부품 FAIL → 높음
+  borderline_fail: "medium"           # 경계값 판정 FAIL → 중간
+  conditional_pass: "low"             # 조건부 합격 → 낮음 (재검사 권고)
+
+# =============================================================================
+# Exclude patterns
+# =============================================================================
+
+exclude_keywords:
+  - 폐기
+  - 스크랩
+  - 테스트용

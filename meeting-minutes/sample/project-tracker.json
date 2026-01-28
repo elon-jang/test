@@ -1,0 +1,37 @@
+{
+  "project": "프로젝트 알파",
+  "items": [
+    {
+      "id": "DEV-142",
+      "title": "백엔드 API 리팩토링",
+      "owner": "김영수",
+      "status": "in_progress",
+      "due_date": "2025-01-29",
+      "priority": "high"
+    },
+    {
+      "id": "DEV-145",
+      "title": "디자인 시스템 컴포넌트 라이브러리",
+      "owner": "박지현",
+      "status": "in_progress",
+      "due_date": "2025-02-05",
+      "priority": "medium"
+    },
+    {
+      "id": "DEV-148",
+      "title": "QA 자동화 테스트 스크립트",
+      "owner": "이민호",
+      "status": "completed",
+      "due_date": "2025-01-24",
+      "priority": "medium"
+    },
+    {
+      "id": "DEV-150",
+      "title": "사용자 대시보드 리디자인",
+      "owner": "박지현",
+      "status": "pending",
+      "due_date": "2025-02-15",
+      "priority": "low"
+    }
+  ]
+}

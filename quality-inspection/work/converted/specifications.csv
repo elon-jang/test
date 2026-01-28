@@ -1,0 +1,11 @@
+part_id,part_name,category,measurement_type,spec_min,spec_max,unit,critical
+ENG-001,엔진 마운트 볼트,mechanical,torque,40,50,Nm,false
+ENG-001,엔진 마운트 볼트,mechanical,temperature,,85,°C,false
+BRK-001,브레이크 패드,safety,thickness,3.0,5.0,mm,true
+BRK-001,브레이크 패드,safety,friction_coefficient,0.3,0.5,,true
+ECU-001,엔진 제어 유닛,electrical,voltage,4.75,5.25,V,true
+ECU-001,엔진 제어 유닛,electrical,current,1.5,3.0,A,false
+SUS-001,서스펜션 스프링,mechanical,spring_rate,25,35,N/mm,false
+AIR-001,에어백 모듈,safety,deployment_time,,35,ms,true
+WIR-001,메인 배선 하네스,electrical,resistance,,1.0,Ω,false
+SEN-001,산소 센서,electrical,response_time,,50,ms,false

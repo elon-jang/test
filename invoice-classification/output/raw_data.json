@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "id": "INV-001",
+      "date": "2025-01-15",
+      "vendor": "스타벅스 강남역점",
+      "description": "팀 미팅 커피",
+      "amount": 25200
+    },
+    {
+      "id": "INV-002",
+      "date": "2025-01-16",
+      "vendor": "KTX 코레일",
+      "description": "서울→부산 출장 왕복",
+      "amount": 106400
+    },
+    {
+      "id": "INV-003",
+      "date": "2025-01-18",
+      "vendor": "한우마을",
+      "description": "부서 신년회 회식 (8명)",
+      "amount": 480000
+    },
+    {
+      "id": "INV-004",
+      "date": "2025-01-20",
+      "vendor": "카카오택시",
+      "description": "고객사 미팅 이동",
+      "amount": 45000
+    },
+    {
+      "id": "INV-005",
+      "date": "2025-01-20",
+      "vendor": "카카오택시",
+      "description": "사무실 복귀",
+      "amount": 45000
+    },
+    {
+      "id": "INV-006",
+      "date": "2025-01-10",
+      "vendor": "Adobe Inc.",
+      "description": "Creative Cloud 연간 구독",
+      "amount": 792000
+    },
+    {
+      "id": "INV-007",
+      "date": "2025-01-22",
+      "vendor": "알파문구",
+      "description": "A4용지 10박스 + 토너 2개",
+      "amount": 185000
+    },
+    {
+      "id": "INV-008",
+      "date": "2025-01-23",
+      "vendor": "호텔 부산",
+      "description": "부산 출장 1박",
+      "amount": 130000
+    },
+    {
+      "id": "INV-009",
+      "date": "2025-01-25",
+      "vendor": "쿠팡",
+      "description": "사무실 비품 구매",
+      "amount": 1250000
+    },
+    {
+      "id": "INV-010",
+      "date": "2025-01-27",
+      "vendor": "교보문고",
+      "description": "업무 참고 도서 3권",
+      "amount": 67500
+    },
+    {
+      "id": "INV-011",
+      "date": "2025-01-28",
+      "vendor": "AWS",
+      "description": "EC2 + S3 월간 사용료",
+      "amount": 345000
+    },
+    {
+      "id": "INV-012",
+      "date": "2025-01-28",
+      "vendor": "팀원 점심",
+      "description": "팀 점심 식사 (5명)",
+      "amount": 89000
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+part_id,measurement_type,measured_value,unit,inspector,date
+ENG-001,torque,45.2,Nm,김철수,2025-01-27
+ENG-001,temperature,82.5,°C,김철수,2025-01-27
+BRK-001,thickness,3.8,mm,이영희,2025-01-27
+BRK-001,friction_coefficient,0.31,,이영희,2025-01-27
+ECU-001,voltage,4.5,V,박민수,2025-01-27
+ECU-001,current,3.5,A,박민수,2025-01-27
+SUS-001,spring_rate,28.5,N/mm,김철수,2025-01-27
+AIR-001,deployment_time,28,ms,이영희,2025-01-27
+WIR-001,resistance,1.5,Ω,박민수,2025-01-27
+SEN-001,response_time,48,ms,박민수,2025-01-27
